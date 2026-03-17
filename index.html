@@ -38,6 +38,25 @@
       <section id="projects" class="container projects">
         <h3>Proyectos</h3>
         <div class="grid">
+          <article class="card project-tapify">
+            <h4>Tapify</h4>
+            <p>Aplicación móvil — reproducción de audio y listas inteligentes.</p>
+            <div class="gallery">
+              <button class="thumb" data-type="image" data-src="assets/tapify/tapify-1.png">
+                <img src="assets/tapify/tapify-1-thumb.png" alt="Tapify screenshot 1">
+              </button>
+              <button class="thumb" data-type="image" data-src="assets/tapify/tapify-2.png">
+                <img src="assets/tapify/tapify-2-thumb.png" alt="Tapify screenshot 2">
+              </button>
+              <button class="thumb" data-type="image" data-src="assets/tapify/tapify-3.png">
+                <img src="assets/tapify/tapify-3-thumb.png" alt="Tapify screenshot 3">
+              </button>
+              <button class="thumb" data-type="video" data-src="assets/tapify/tapify-demo.mp4">
+                <div class="video-thumb">▶ Demo</div>
+              </button>
+            </div>
+            <p class="muted">Haz click en una imagen para ampliar o en "Demo" para reproducir el vídeo.</p>
+          </article>
           <article class="card">
             <h4>Proyecto A</h4>
             <p>Descripción breve del proyecto A. Tecnologías: HTML, CSS, JavaScript.</p>
@@ -70,8 +89,57 @@
       </div>
     </footer>
 
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <button class="lightbox-close" aria-label="Cerrar">✕</button>
+      <div class="lightbox-content">
+        <img class="lightbox-img" src="" alt="">
+        <video class="lightbox-video" controls src=""></video>
+      </div>
+    </div>
+
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Lightbox gallery
+      const lightbox = document.getElementById('lightbox');
+      const lbImg = lightbox.querySelector('.lightbox-img');
+      const lbVideo = lightbox.querySelector('.lightbox-video');
+      const closeBtn = lightbox.querySelector('.lightbox-close');
+
+      function openLightbox(type, src, alt){
+        lbImg.style.display = 'none';
+        lbVideo.style.display = 'none';
+        if(type === 'image'){
+          lbImg.src = src;
+          lbImg.alt = alt || '';
+          lbImg.style.display = '';
+        } else if(type === 'video'){
+          lbVideo.src = src;
+          lbVideo.style.display = '';
+          lbVideo.play().catch(()=>{});
+        }
+        lightbox.setAttribute('aria-hidden','false');
+      }
+
+      function closeLightbox(){
+        lightbox.setAttribute('aria-hidden','true');
+        lbVideo.pause();
+        lbVideo.src = '';
+        lbImg.src = '';
+      }
+
+      document.querySelectorAll('.thumb').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const type = btn.dataset.type;
+          const src = btn.dataset.src;
+          const img = btn.querySelector('img');
+          openLightbox(type, src, img ? img.alt : '');
+        });
+      });
+
+      closeBtn.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', (e)=>{ if(e.target===lightbox) closeLightbox(); });
+      document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeLightbox(); });
     </script>
   </body>
 </html>
