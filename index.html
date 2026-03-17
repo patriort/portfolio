@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio — Tu Nombre</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="logo">Tu Nombre</h1>
+        <nav class="nav">
+          <a href="#about">Sobre mí</a>
+          <a href="#projects">Proyectos</a>
+          <a href="#contact">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h2>Desarrollo web • Diseño UI • Proyecto abierto</h2>
+          <p>Soy desarrollador/a web — construyo interfaces limpias y experiencias accesibles.</p>
+          <p class="actions">
+            <a class="btn" href="#projects">Ver proyectos</a>
+            <a class="btn ghost" href="#contact">Contactar</a>
+          </p>
+        </div>
+      </section>
+
+      <section id="about" class="container about">
+        <h3>Sobre mí</h3>
+        <p>Hola — soy <strong>Tu Nombre</strong>. Me especializo en crear aplicaciones web modernas con HTML, CSS y JavaScript. Disfruto convertir ideas en productos sencillos y útiles.</p>
+      </section>
+
+      <section id="projects" class="container projects">
+        <h3>Proyectos</h3>
+        <div class="grid">
+          <article class="card">
+            <h4>Proyecto A</h4>
+            <p>Descripción breve del proyecto A. Tecnologías: HTML, CSS, JavaScript.</p>
+            <p><a href="#">Ver en GitHub →</a></p>
+          </article>
+
+          <article class="card">
+            <h4>Proyecto B</h4>
+            <p>Descripción breve del proyecto B. Tecnología: React, Vite.</p>
+            <p><a href="#">Ver en GitHub →</a></p>
+          </article>
+
+          <article class="card">
+            <h4>Proyecto C</h4>
+            <p>Descripción breve del proyecto C. Hecho con Node.js y una pequeña API.</p>
+            <p><a href="#">Ver en GitHub →</a></p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="container contact">
+        <h3>Contacto</h3>
+        <p>¿Quieres colaborar o tienes alguna pregunta? Escríbeme a <a href="mailto:tu@correo.com">tu@correo.com</a> o conecta en <a href="#">GitHub</a> / <a href="#">LinkedIn</a>.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>© <span id="year"></span> Tu Nombre. Built for GitHub Pages.</small>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
