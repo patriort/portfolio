@@ -47,23 +47,40 @@
         <div class="stack-layout">
           <div>
             <p class="muted">Tecnologías con las que trabajo en proyectos reales.</p>
-            <div class="chips">
-              <span class="chip">Swift</span>
-              <span class="chip">React Native</span>
-              <span class="chip">TypeScript</span>
-              <span class="chip">Node.js</span>
-              <span class="chip">.NET</span>
-              <span class="chip">HTML/CSS</span>
-              <span class="chip">UI/UX</span>
+            <div class="chips-slider" id="stack-slider">
+              <button class="slider-arrow" type="button" data-dir="prev" aria-label="Tecnologia anterior">‹</button>
+              <div class="chips-viewport">
+                <div class="chips chips-track">
+                  <span class="chip">HTML</span>
+                  <span class="chip">CSS</span>
+                  <span class="chip">JavaScript</span>
+                  <span class="chip">Node.js</span>
+                  <span class="chip">Angular</span>
+                  <span class="chip">Blazor</span>
+                  <span class="chip">Java</span>
+                  <span class="chip">C++</span>
+                  <span class="chip">C#</span>
+                  <span class="chip">ASP.NET Core</span>
+                  <span class="chip">API REST</span>
+                  <span class="chip">SQL Server</span>
+                  <span class="chip">MySQL</span>
+                  <span class="chip">MongoDB</span>
+                  <span class="chip">Entity Framework</span>
+                  <span class="chip">Git & GitHub</span>
+                  <span class="chip">Docker</span>
+                  <span class="chip">Azure DevOps</span>
+                </div>
+              </div>
+              <button class="slider-arrow" type="button" data-dir="next" aria-label="Tecnologia siguiente">›</button>
             </div>
           </div>
           <div>
             <p class="muted">Servicios</p>
             <ul class="service-list">
-              <li>Desarrollo de apps móviles y web</li>
-              <li>Diseño de interfaces enfocadas en usabilidad</li>
-              <li>Construcción de APIs y backend</li>
-              <li>Optimización y mantenimiento de productos existentes</li>
+              <li>Desarrollo frontend y backend (web y software)</li>
+              <li>Diseño e implementación de API REST</li>
+              <li>Modelado e integración de bases de datos SQL y NoSQL</li>
+              <li>Versionado, despliegue y soporte con Git, Docker y Azure DevOps</li>
             </ul>
           </div>
         </div>
@@ -154,7 +171,7 @@
 
       <section id="contact" class="container contact">
         <h3>Contacto</h3>
-        <p>¿Querés colaborar o tenés alguna pregunta? Escribíme</p>
+        <p>¿Querés colaborar o tenés alguna pregunta? Escribíme.</p>
         <p class="contact-actions">
           <a class="btn small" href="mailto:patricioarbulo@gmail.com">Enviar email</a>
           <button class="btn ghost small" id="copy-email-btn" type="button" data-email="patricioarbulo@gmail.com">Copiar email</button>
@@ -235,6 +252,44 @@
           } catch {
             copyFeedback.textContent = 'No se pudo copiar automaticamente.';
           }
+        });
+      }
+
+      // Stack slider arrows + autoplay
+      const stackSlider = document.getElementById('stack-slider');
+      if(stackSlider){
+        const viewport = stackSlider.querySelector('.chips-viewport');
+        const track = stackSlider.querySelector('.chips-track');
+        const arrows = stackSlider.querySelectorAll('.slider-arrow');
+        const step = 220;
+
+        function scrollTrack(direction){
+          if(!viewport || !track) return;
+          if(direction === 'next'){
+            const nearEnd = viewport.scrollLeft + viewport.clientWidth >= track.scrollWidth - 8;
+            if(nearEnd){
+              viewport.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+              viewport.scrollBy({ left: step, behavior: 'smooth' });
+            }
+          } else {
+            const nearStart = viewport.scrollLeft <= 8;
+            if(nearStart){
+              viewport.scrollTo({ left: track.scrollWidth, behavior: 'smooth' });
+            } else {
+              viewport.scrollBy({ left: -step, behavior: 'smooth' });
+            }
+          }
+        }
+
+        arrows.forEach((btn)=>{
+          btn.addEventListener('click', ()=> scrollTrack(btn.dataset.dir));
+        });
+
+        let sliderTimer = setInterval(()=> scrollTrack('next'), 2800);
+        stackSlider.addEventListener('mouseenter', ()=> clearInterval(sliderTimer));
+        stackSlider.addEventListener('mouseleave', ()=>{
+          sliderTimer = setInterval(()=> scrollTrack('next'), 2800);
         });
       }
     </script>
