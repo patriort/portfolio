@@ -37,13 +37,10 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
 
 .stack-layout{display:grid;grid-template-columns:1.4fr 1fr;gap:1rem}
 .chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.75rem}
-.chips-slider{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:.5rem;margin-top:.75rem}
-.chips-viewport{overflow:hidden}
-.chips-track{display:flex;flex-wrap:nowrap;gap:.5rem;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;margin-top:0}
-.chips-track::-webkit-scrollbar{display:none}
-.slider-arrow{width:32px;height:32px;border:1px solid rgba(255,255,255,0.12);border-radius:999px;background:rgba(255,255,255,0.03);color:#cfe6ff;cursor:pointer;line-height:1;font-size:1.1rem}
-.slider-arrow:hover{background:rgba(125,211,252,0.18);border-color:rgba(125,211,252,0.35)}
 .chip{display:inline-block;padding:.3rem .55rem;border:1px solid rgba(125,211,252,0.35);border-radius:999px;color:#7dd3fc;background:rgba(125,211,252,0.08);font-size:.86rem;font-weight:600}
+.tech-label{margin:.35rem 0 .2rem}
+.project-tech-chips{margin-top:.25rem;margin-bottom:.2rem}
+.project-tech-chips .chip{font-size:.8rem;padding:.24rem .5rem}
 .service-list{margin:.4rem 0 0;padding-left:1rem;color:var(--muted)}
 
 .process-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.9rem}
@@ -120,7 +117,6 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
   .grid{grid-template-columns:1fr}
   .stack-layout{grid-template-columns:1fr}
   .process-grid{grid-template-columns:1fr}
-  .slider-arrow{width:28px;height:28px}
   .site-header .container{flex-direction:column;align-items:flex-start}
   .nav{margin-top:.75rem}
 }
