@@ -18,7 +18,9 @@
         <h1 class="logo">Patricio Arbulo Graffigna</h1>
         <nav class="nav">
           <a href="#about">Sobre mí</a>
+          <a href="#stack">Stack</a>
           <a href="#projects">Proyectos</a>
+          <a href="#process">Proceso</a>
           <a href="#contact">Contacto</a>
         </nav>
       </div>
@@ -40,13 +42,41 @@
         <p>Hola, mi nombre es <strong>Patricio</strong>. Soy estudiante avanzado de la Licenciatura en Sistemas en ORT. Me especializo en desarrollar aplicaciones web, móviles y .NET. Me centro en el diseño de interfaces intuitivas y la creación de experiencias de usuario agradables.</p>
       </section>
 
+      <section id="stack" class="container stack">
+        <h3>Stack y Servicios</h3>
+        <div class="stack-layout">
+          <div>
+            <p class="muted">Tecnologías con las que trabajo en proyectos reales.</p>
+            <div class="chips">
+              <span class="chip">Swift</span>
+              <span class="chip">React Native</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">.NET</span>
+              <span class="chip">HTML/CSS</span>
+              <span class="chip">UI/UX</span>
+            </div>
+          </div>
+          <div>
+            <p class="muted">Servicios</p>
+            <ul class="service-list">
+              <li>Desarrollo de apps móviles y web</li>
+              <li>Diseño de interfaces enfocadas en usabilidad</li>
+              <li>Construcción de APIs y backend</li>
+              <li>Optimización y mantenimiento de productos existentes</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <section id="projects" class="container projects">
         <h3>Proyectos</h3>
         <div class="grid">
           <article class="card project-tapify">
             <h4>Tapify</h4>
             <p>Aplicación de gestión de gastos.</p>
-            <p>Tecnologías: Swift.</p>
+            <p>Programado en Swift.</p>
+            <p class="project-impact">Resultado: prototipo funcional de gestión personal con foco en simplicidad y claridad visual.</p>
             <p class="card-spacer" aria-hidden="true"></p>
             <div class="gallery">
               <button class="thumb" data-type="image" data-src="assets/IMG_0301-portrait.png">
@@ -66,6 +96,7 @@
             <h4>PlayNow (En desarrollo)</h4>
             <p>Aplicación de reservas de deportes.</p>
             <p>Tecnologías: React Native, Node.js, TypeScript.</p>
+            <p class="project-impact">Resultado: flujo base de reservas y disponibilidad implementado para validación temprana.</p>
             <div class="gallery">
               <button class="thumb" data-type="image" data-src="assets/localhost_19006_(Pixel 7)-portrait.png">
                 <img src="assets/localhost_19006_(Pixel 7)-portrait.png" alt="PlayNow screenshot 1" width="1118" height="2361">
@@ -77,15 +108,16 @@
                 <img src="assets/localhost_19006_(Pixel 7) (2)-portrait.png" alt="PlayNow screenshot 3" width="1118" height="2361">
               </button>
             </div>
-            <p class="muted project-links">
+            <!-- <p class="muted project-links">
               <a href="#" class="btn ghost small">Ver en App Store</a>
               <a href="#" class="btn small">Ver en Play Store <span class="external-icon">↗</span></a>
-            </p>
+            </p> -->
           </article>
           <article class="card project-tapify-site">
             <h4>Tapify Site</h4>
             <p>Página web para Tapify.</p>
             <p>Tecnologías: HTML, CSS, JavaScript, Node.js.</p>
+            <p class="project-impact">Resultado: landing enfocada en comunicar valor del producto y dirigir a conversión.</p>
             <div class="tapify-site-gallery">
               <button class="thumb tapify-site-thumb" data-type="image" data-src="assets/tapifysite.png">
                 <img src="assets/tapifysite.png" alt="Tapify Site captura" width="2268" height="1476">
@@ -98,9 +130,38 @@
         </div>
       </section>
 
+      <section id="process" class="container process">
+        <h3>Cómo trabajo</h3>
+        <div class="process-grid">
+          <article class="process-step">
+            <h4>1. Descubrimiento</h4>
+            <p>Alineo objetivos del proyecto, alcance y prioridades desde el inicio.</p>
+          </article>
+          <article class="process-step">
+            <h4>2. Diseño UX/UI</h4>
+            <p>Defino flujos y pantallas claras para maximizar usabilidad y consistencia.</p>
+          </article>
+          <article class="process-step">
+            <h4>3. Desarrollo</h4>
+            <p>Implemento frontend y backend con foco en calidad, mantenibilidad y performance.</p>
+          </article>
+          <article class="process-step">
+            <h4>4. Entrega e iteración</h4>
+            <p>Publico, mido resultados y mejoro el producto en ciclos cortos con feedback.</p>
+          </article>
+        </div>
+      </section>
+
       <section id="contact" class="container contact">
         <h3>Contacto</h3>
-        <p>¿Querés colaborar o tenés alguna pregunta? Escribíme a <a href="mailto:patricioarbulo@gmail.com">patricioarbulo@gmail.com</a> o conecta en <a href="https://www.linkedin.com/in/patriarbulo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+        <p>¿Querés colaborar o tenés alguna pregunta? Escribíme</p>
+        <p class="contact-actions">
+          <a class="btn small" href="mailto:patricioarbulo@gmail.com">Enviar email</a>
+          <button class="btn ghost small" id="copy-email-btn" type="button" data-email="patricioarbulo@gmail.com">Copiar email</button>
+          <a class="btn ghost small" href="https://www.linkedin.com/in/patriarbulo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="btn ghost small" href="https://api.whatsapp.com/send?phone=+59892972595&text=Hola%20Patricio%2C%20vi%20tu%20portfolio%20y%20me%20gustaria%20hablar%20de%20un%20proyecto." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </p>
+        <small id="copy-email-feedback" class="muted" aria-live="polite"></small>
       </section>
     </main>
 
@@ -161,6 +222,21 @@
       closeBtn.addEventListener('click', closeLightbox);
       lightbox.addEventListener('click', (e)=>{ if(e.target===lightbox) closeLightbox(); });
       document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeLightbox(); });
+
+      // Contact actions
+      const copyEmailBtn = document.getElementById('copy-email-btn');
+      const copyFeedback = document.getElementById('copy-email-feedback');
+      if(copyEmailBtn && copyFeedback){
+        copyEmailBtn.addEventListener('click', async ()=>{
+          const email = copyEmailBtn.dataset.email || '';
+          try {
+            await navigator.clipboard.writeText(email);
+            copyFeedback.textContent = 'Email copiado al portapapeles.';
+          } catch {
+            copyFeedback.textContent = 'No se pudo copiar automaticamente.';
+          }
+        });
+      }
     </script>
   </body>
 </html>
