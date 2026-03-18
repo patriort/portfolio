@@ -31,6 +31,12 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
 .card h4{margin:.25rem 0}
 .card .card-spacer{min-height:1.5em;margin:0}
 .project-impact{margin:.4rem 0 0;color:#7dd3fc;font-size:.92rem}
+
+/* Align project card content blocks across columns */
+.projects .card > p:first-of-type{min-height:3.2em}
+.projects .card .project-tech-chips{min-height:3.9rem;align-content:flex-start}
+.projects .card .project-impact{min-height:5.4rem}
+
 .process{padding:2rem 0}
 .contact{padding:2rem 0;border-top:1px solid rgba(255,255,255,0.02)}
 .site-footer{padding:1.5rem 0;border-top:1px solid rgba(255,255,255,0.02);text-align:center;color:var(--muted)}
@@ -115,6 +121,9 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
 }
 @media (max-width:600px){
   .grid{grid-template-columns:1fr}
+  .projects .card > p:first-of-type{min-height:auto}
+  .projects .card .project-tech-chips{min-height:auto}
+  .projects .card .project-impact{min-height:auto}
   .stack-layout{grid-template-columns:1fr}
   .process-grid{grid-template-columns:1fr}
   .site-header .container{flex-direction:column;align-items:flex-start}
