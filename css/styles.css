@@ -41,6 +41,7 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
 .hero p{color:var(--muted);max-width:60ch}
 .actions{margin-top:1rem}
 .btn{display:inline-block;padding:.6rem 1rem;border-radius:10px;background:linear-gradient(90deg,var(--accent),#8b5cf6);color:#021428;text-decoration:none;font-weight:600;transition:transform .18s ease,box-shadow .22s ease,opacity .18s ease}
+.hero .actions .btn{padding:.85rem 1.35rem;font-size:1.05rem}
 .btn:hover{transform:translateY(-1px);box-shadow:0 8px 16px rgba(6,182,212,0.22)}
 .btn:active{transform:translateY(0)}
 .btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(255,255,255,0.06)}
