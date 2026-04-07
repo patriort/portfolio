@@ -168,10 +168,12 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
   .thumb{width:100%;height:100%}
   .video-thumb{width:100%;height:auto}
   .thumb img{height:100%;object-fit:cover}
-  .project-playnow .thumb img{object-fit:contain}
-  .project-playnow .gallery{grid-auto-rows:230px}
-  .project-tapify .gallery{grid-auto-rows:340px}
-  .project-tapify .thumb img{object-fit:contain}
+  .project-playnow .gallery{grid-auto-rows:auto}
+  .project-playnow .thumb{height:auto}
+  .project-playnow .thumb img{width:100%;height:auto;object-fit:contain}
+  .project-tapify .gallery{grid-auto-rows:auto}
+  .project-tapify .thumb{height:auto}
+  .project-tapify .thumb img{width:100%;height:auto;object-fit:contain}
 }
 
 @media (max-width:900px){
