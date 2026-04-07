@@ -169,6 +169,7 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
   .video-thumb{width:100%;height:auto}
   .thumb img{height:100%;object-fit:cover}
   .project-playnow .thumb img{object-fit:contain}
+  .project-playnow .gallery{grid-auto-rows:230px}
   .project-tapify .gallery{grid-auto-rows:340px}
   .project-tapify .thumb img{object-fit:contain}
 }
