@@ -99,6 +99,10 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
 .project-playnow .thumb{padding:4px}
 .project-playnow .thumb img{object-fit:contain;object-position:center}
 
+/* Tapify screenshots: keep full device visible instead of cropping */
+.project-tapify .thumb{padding:4px}
+.project-tapify .thumb img{object-fit:contain;object-position:center}
+
 /* Lightbox */
 .lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(2,6,23,0.75);z-index:1200;padding:2rem}
 .lightbox[aria-hidden="false"]{display:flex}
@@ -165,6 +169,8 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
   .video-thumb{width:100%;height:auto}
   .thumb img{height:100%;object-fit:cover}
   .project-playnow .thumb img{object-fit:contain}
+  .project-tapify .gallery{grid-auto-rows:340px}
+  .project-tapify .thumb img{object-fit:contain}
 }
 
 @media (max-width:900px){
