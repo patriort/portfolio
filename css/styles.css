@@ -168,12 +168,12 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
   .thumb{width:100%;height:100%}
   .video-thumb{width:100%;height:auto}
   .thumb img{height:100%;object-fit:cover}
-  .project-playnow .gallery{grid-auto-rows:auto}
-  .project-playnow .thumb{height:auto}
-  .project-playnow .thumb img{width:100%;height:auto;object-fit:contain}
-  .project-tapify .gallery{grid-auto-rows:auto}
-  .project-tapify .thumb{height:auto}
-  .project-tapify .thumb img{width:100%;height:auto;object-fit:contain}
+  .project-tapify .gallery{grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:132px}
+  .project-tapify .thumb{height:100%}
+  .project-tapify .thumb img{width:100%;height:100%;object-fit:contain}
+  .project-playnow .gallery{grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:132px}
+  .project-playnow .thumb{height:100%}
+  .project-playnow .thumb img{width:100%;height:100%;object-fit:contain}
 }
 
 @media (max-width:900px){
